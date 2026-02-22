@@ -1,5 +1,14 @@
+# This file primarily contains two modules:
+
+# olf_postprocess
+# Handles order-level feature engineering, including: LM binning, Peak hour tagging, TTC / TTA metrics, Bid tagging, Order status flags, PPKM calculation
+
+# olf_metrics 
+# Performs multi-level aggregations with: G2N funnel metrics, TTA / TTC percentiles, Bid order % and bid amount percentiles, Ping metrics (APR, DPR, ME, etc.)
+
 import numpy as np
 import pandas as pd
+
 
 def lm_bin(x: float) -> str:
     """
