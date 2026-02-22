@@ -161,7 +161,7 @@ def olf_metrics(df, group_cols, dropna=False):
         avg_fm = ('accept_to_pickup_distance', lambda x: np.round(np.mean(x),2)),
         p50_fm = ('accept_to_pickup_distance', lambda x: safe_percentile(x, 50)),
 
-        # can add ppkm at short long, medium orders
+        # ppkm
         avg_ppkm = ('ppkm', lambda x: np.round(np.mean(x),2)),
         p50_ppkm = ('ppkm', lambda x: safe_percentile(x, 50)),
 
